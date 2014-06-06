@@ -1,0 +1,24 @@
+<% layout('layout') -%>
+
+<div class="animated fadeInLeft" style="margin-top:50px;">
+    <!-- Graph View -->
+    <div class="container paper" data-view-type="nodes">
+        <h3 class="page-header text-muted"><i class="fa fa-folder text-primary"></i><strong> \</strong> <span class="text-primary">Directory</span></h3>
+        <div class="row" style="min-height:400px;margin:10px;overflow-y:scroll">
+            <% for(var binder_name in model.binder){ %>
+            <div class="col-sm-2 paper text-left" style="margin-right: 15px;padding:15px;">
+                <i class="fa <%= model.binder[binder_name].icon %> fa-2x pull-right"></i>
+                <a href="#" class="text-default"><strong><%= binder_name %></strong></a>
+            </div>
+            <% } %>
+        </div>
+        <div class="row" style="bottom:-10px;">
+            <a href="#">Sort</a>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+    </script>
+</div>

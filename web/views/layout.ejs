@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>meta | binder</title>
+    <link href="../public/css/bootstrap.css" rel="stylesheet" />
+    <link href="../public/css/boostrap.custom.css" rel="stylesheet" />
+    <link href="../public/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../public/css/animate.min.css" rel="stylesheet" />
+    <link href="../public/css/fonts.css" rel="stylesheet" />
+    <link href="../public/css/app.css" rel="stylesheet" />
+    <link href="../public/css/summernote.css" rel="stylesheet" />
+    <link href="../public/css/summernote-bs3.css" rel="stylesheet" />
+    <script src="../public/lib/headjs/dist/1.0.0/head.min.js" data-headjs-load="../public/modules/init.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top shadow" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><strong>metaBinder</strong></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <% if (!user) { %>
+                    <li class="active"><a href="/"><i class="fa fa-home fa-2x"></i></a></li>
+                    <li class="active"><a href="/login"><i class="fa fa-sign-in fa-2x"></i>  Login</a></li>
+                    <% } else { %>
+                    <li class="active"><a href="/"><i class="fa fa-home fa-2x"></i></a></li>
+                    <li><a href="/account"><i class="fa fa-user fa-2x"></i></a></li>
+                    <li id="user_actions" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-pencil fa-2x"></i><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header"><strong>Actions</strong></li>
+                            <li><a href="#"><i class="fa fa-plus"></i> Object</a></li>
+                            <li><a href="#"><i class="fa fa-file-o"></i> Document</a></li>
+                            <li><a href="#"><i class="fa fa-calendar-o"></i> Event</a></li>
+                            <li><a href="#"><i class="fa fa-table"></i> Data</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Actions</li>
+                            <li><a href="#"><span class="text-primary"><i class="fa fa-arrow-circle-right"></i> Import</span></a></li>
+                            <li><a href="#"><span class="text-primary"><i class="fa fa-arrow-circle-left"></i> Export</span></a></li>
+                        </ul>
+                    </li>
+                    <li id="user_binders" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open fa-2x"></i><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/binders"><i class="fa fa-folder-open"></i> All</a></li>
+                            <li><a href="#"><i class="fa fa-folder-open-o"></i> Binder 2</a></li>
+                            <li><a href="#"><i class="fa fa-folder-open-o"></i> Binder 3</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Tools</li>
+                            <li><a href="#"><i class="fa fa-plus-square"></i> New Binder</a></li>
+                        </ul>
+                    </li>
+                    <% } %>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <!-- Begin page content -->
+    <div class="container">
+        <!-- Scripts -->
+        <script src="../public/lib/jquery/jquery.min.js"></script>
+        <%- body %>
+    </div>
+
+    <!-- Action Packed Footer -->
+    <div id="footer" style="padding-top: 10px;">
+        <% if (user) { %>
+        <div class="col-sm-6">
+            <div class="btn-group">
+                <a id="action_add" href="#" class="btn btn-default" data-toggle="modal" data-target="#modal_action_add"><i class="fa fa-plus fa-3x"></i></a>
+                <a href="#" class="btn btn-default"><i class="fa fa-table fa-3x"></i></a>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <input class="form-control col-sm-8 input-lg" placeholder="Search" />
+        </div>
+        <% } %>
+    </div>
+
+    <!-- MODALS -->
+    <!-- Modal Create Object -->
+    <div class="modal fade " id="modal_action_add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" style="width:992px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Create a Card</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <input class="form-control input-lg" placeholder="Title" />
+                    </div>
+                    <div class="row">
+                        <div id="summernote" class="col-lg-10"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times fa-2x"></i> </button>
+                        <button type="button" class="btn btn-primary"><i class="fa fa-floppy-o fa-2x"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $('#action_add').on('click', function () {
+            $('[data-view-type="table"]').on('click', function () {
+                $('[data-view-type="table"]').removeClass('hidden');
+                $('[data-view-type="nodes"]').addClass('hidden');
+            });
+        });
+    </script>
+
+
+    <!-- END MODALS-->
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿body {
+    background-image: url('http://raynespa.com/wp-content/uploads/2013/06/wood-grain-HD-Wallpapers.jpg');
+}
+
+
+.blur {
+    background: -moz-linear-gradient(top, rgba(79,133,187,0.2) 0%, rgba(79,133,187,0.2) 1%, rgba(79,133,187,0.2) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(79,133,187,0.2)), color-stop(1%,rgba(79,133,187,0.2)), color-stop(100%,rgba(79,133,187,0.2))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(79,133,187,0.2) 0%,rgba(79,133,187,0.2) 1%,rgba(79,133,187,0.2) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(79,133,187,0.2) 0%,rgba(79,133,187,0.2) 1%,rgba(79,133,187,0.2) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(79,133,187,0.2) 0%,rgba(79,133,187,0.2) 1%,rgba(79,133,187,0.2) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(79,133,187,0.2) 0%,rgba(79,133,187,0.2) 1%,rgba(79,133,187,0.2) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#334f85bb', endColorstr='#334f85bb',GradientType=0 ); /* IE6-9 */
+}
+
+.footer-action {
+    color :rgba(63,76,107,1) ;
+    border: 2px solid rgba(63,76,107,1);
+    border-radius: 6px;
+}
+
+.shadow {
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+}
+
+.paper {
+    color: rgba(63,76,107,1);
+    -webkit-box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.75);
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+
+border-radius: 6px;
+padding:10px;
+}
+
+
+.dark-paper {
+    border-radius: 1px;
+    padding:10px;
+    color : rgba(246,246,246,1);
+
+    background: rgb(109,109,109); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(109,109,109,1) 0%, rgba(73,73,73,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(109,109,109,1)), color-stop(100%,rgba(73,73,73,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(109,109,109,1) 0%,rgba(73,73,73,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(109,109,109,1) 0%,rgba(73,73,73,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(109,109,109,1) 0%,rgba(73,73,73,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(109,109,109,1) 0%,rgba(73,73,73,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', endColorstr='#494949',GradientType=0 ); /* IE6-9 */
+
+}

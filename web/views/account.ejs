@@ -1,0 +1,68 @@
+<% layout('layout') -%>
+
+<div class="animated fadeInLeft" style="margin-top:50px;">
+    <div class="row">
+        <div class="col-md-2">
+            <h3><span class="text-primary">Section</span></h3>
+        </div>
+        <div class="col-md-10" style="background-color:white">
+            <h3>User Details</h3>
+            <% for(var member_index in user) { %>
+            <div class="form-group">
+                <label class="label"><strong class="text-info"><%= member_index %></strong></label>
+                <input class="form-control" type="text" value="<%= user[member_index] %>"></input>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <h3><span class="text-primary">Section</span></h3>
+        </div>
+        <div class="col-md-10" style="background-color:white">
+            <h3>Email Details</h3>
+            <div class="form-group">
+                <label class="label"><strong class="text-info"><%= member_index %></strong></label>
+                <input class="form-control" type="text" value="<%= user[member_index] %>"></input>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <h3><span class="text-primary">Section</span></h3>
+        </div>
+            <div class="col-md-10" style="background-color:white">
+                <h3>Storage Details</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong class="text-primary pull-right">Dropbox</strong>
+                        <div class="form-group">
+                            <label class="label"><strong class="text-info"><i class="fa fa-dropbox fa-2x"></i> Dropbox Email</strong></label>
+                            <input class="form-control" type="email" value="email@email"></input>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="text-primary pull-right">Google Docs</strong>
+                        <div class="form-group">
+                            <label class="label"><strong class="text-info"><i class="fa fa-google-plus fa-2x"></i> Dropbox Email</strong></label>
+                            <input class="form-control" type="email" value="email@email"></input>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-md-2">
+            <h3><span class="text-primary">Section</span></h3>
+        </div>
+        <div class="col-md-10" style="background-color:white">
+            <h3>User Details</h3>
+            <% for(var member_index in user) { %>
+            <div class="form-group">
+                <label class="label"><strong class="text-info"><%= member_index %></strong></label>
+                <input class="form-control" type="text" value="<%= user[member_index] %>"></input>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
